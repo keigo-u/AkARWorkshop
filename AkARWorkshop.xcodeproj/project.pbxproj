@@ -11,6 +11,9 @@
 		71E3F9142B0346B8006ED225 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E3F9132B0346B8006ED225 /* ContentView.swift */; };
 		71E3F9162B0346B8006ED225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71E3F9152B0346B8006ED225 /* Assets.xcassets */; };
 		71E3F9192B0346B8006ED225 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71E3F9182B0346B8006ED225 /* Preview Assets.xcassets */; };
+		71E3F9212B034747006ED225 /* FamousQuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E3F9202B034747006ED225 /* FamousQuoteModel.swift */; };
+		71E3F9232B034768006ED225 /* FamousQuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E3F9222B034768006ED225 /* FamousQuoteViewModel.swift */; };
+		71E3F9252B034799006ED225 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E3F9242B034799006ED225 /* ARViewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,10 @@
 		71E3F9132B0346B8006ED225 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		71E3F9152B0346B8006ED225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71E3F9182B0346B8006ED225 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		71E3F91F2B034703006ED225 /* SwiftBasis.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = SwiftBasis.playground; path = AkARWorkshop/SwiftBasis.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		71E3F9202B034747006ED225 /* FamousQuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamousQuoteModel.swift; sourceTree = "<group>"; };
+		71E3F9222B034768006ED225 /* FamousQuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamousQuoteViewModel.swift; sourceTree = "<group>"; };
+		71E3F9242B034799006ED225 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +42,7 @@
 		71E3F9052B0346B8006ED225 = {
 			isa = PBXGroup;
 			children = (
+				71E3F91F2B034703006ED225 /* SwiftBasis.playground */,
 				71E3F9102B0346B8006ED225 /* AkARWorkshop */,
 				71E3F90F2B0346B8006ED225 /* Products */,
 			);
@@ -52,7 +60,10 @@
 			isa = PBXGroup;
 			children = (
 				71E3F9112B0346B8006ED225 /* AppDelegate.swift */,
+				71E3F9242B034799006ED225 /* ARViewContainer.swift */,
 				71E3F9132B0346B8006ED225 /* ContentView.swift */,
+				71E3F9202B034747006ED225 /* FamousQuoteModel.swift */,
+				71E3F9222B034768006ED225 /* FamousQuoteViewModel.swift */,
 				71E3F9152B0346B8006ED225 /* Assets.xcassets */,
 				71E3F9172B0346B8006ED225 /* Preview Content */,
 			);
@@ -137,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71E3F9212B034747006ED225 /* FamousQuoteModel.swift in Sources */,
 				71E3F9142B0346B8006ED225 /* ContentView.swift in Sources */,
+				71E3F9232B034768006ED225 /* FamousQuoteViewModel.swift in Sources */,
 				71E3F9122B0346B8006ED225 /* AppDelegate.swift in Sources */,
+				71E3F9252B034799006ED225 /* ARViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +296,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,6 +328,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
