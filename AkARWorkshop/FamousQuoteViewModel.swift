@@ -10,14 +10,14 @@ import Foundation
 final class FamousQuoteViewModel: ObservableObject {
     @Published var famousQuotes: [FamousQuote] = []
     
-    var apiClient: APIClient
+    var fqModel: FamousQuoteModel
     
-    init(apiClient: APIClient) {
-        self.apiClient = apiClient
+    init(fqModel: FamousQuoteModel) {
+        self.fqModel = fqModel
     }
     
     @MainActor
     func fetch() async {
-        self.famousQuotes = await apiClient.fetchFamousQuotes()
+        self.famousQuotes = await fqModel.fetchFamousQuotes()
     }
 }

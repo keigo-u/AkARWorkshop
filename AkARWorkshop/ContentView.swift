@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView : View {
-    @StateObject var viewModel = FamousQuoteViewModel(apiClient: APIClient())
+    @StateObject var viewModel = FamousQuoteViewModel(fqModel: FamousQuoteModel())
     
     var body: some View {
         ARViewContainer(viewModel: viewModel).edgesIgnoringSafeArea(.all)

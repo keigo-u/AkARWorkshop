@@ -12,7 +12,7 @@ struct FamousQuote: Decodable {
     var auther: String
 }
 
-final class APIClient {
+final class FamousQuoteModel {
     
     func fetchFamousQuotes() async -> [FamousQuote] {
         let url = URL(string: "https://meigen.doodlenote.net/api/json.php")!

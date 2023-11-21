@@ -24,7 +24,7 @@ for i in range2 {
 
 // MARK: - オプショナル
 var optional: Int?
-optional = nil
+optional = 1
 
 // MARK: if-let文
 if let unwrapedValue = optional {
@@ -113,3 +113,61 @@ temperature.fahrenheit
 temperature.fahrenheit = 32
 temperature.celsius
 temperature.fahrenheit
+
+//MARK: - 関数とクロージャー
+func triangle(baes bs: Float, height ht: Float) -> Float {
+    return bs * ht / 2.0
+}
+
+func double(_ x: Int) -> Int {
+    return x * 2;
+}
+
+triangle(baes: 4.0, height: 2.0)
+double(10)
+
+let triangleClosure = { (base: Float, height: Float) -> Float in
+    return base * height / 2.0
+}
+
+let doubleClosure = { $0 * 2 }
+
+triangleClosure(4.0, 2.0)
+doubleClosure(10)
+
+//MARK: - デリゲート
+protocol GameDelegate {
+    var numberOfPlayers: Int { get }
+    func gameDidStart()
+    func gameDiedEnd()
+}
+
+class TwoPersonGameDelegate: GameDelegate {
+    var numberOfPlayers: Int {
+        return 2
+    }
+    
+    func gameDidStart() {
+        print("gameDedStart")
+    }
+    
+    func gameDiedEnd() {
+        print("gameDidEnd")
+    }
+}
+
+class Game {
+    var delegate: GameDelegate?
+    
+    func start() {
+        print("Number of players is \(delegate?.numberOfPlayers ?? 1)")
+        delegate?.gameDidStart()
+        print("Playing")
+        delegate?.gameDiedEnd()
+    }
+}
+
+let delegate = TwoPersonGameDelegate()
+let twoPersonGame = Game()
+twoPersonGame.delegate = delegate
+twoPersonGame.start()

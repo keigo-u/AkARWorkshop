@@ -72,10 +72,13 @@ class ARViewController: UIViewController, ARSessionDelegate {
     private func makeTextObject(cordinates: SIMD3<Float>) {
         // 名言を取得
         guard let meigen = viewModel.famousQuotes.first?.meigen else { return }
-        print(meigen)
         // オブジェクトを配置する位置(アンカー)を設定
         let anchor = AnchorEntity()
         anchor.position = cordinates
+        
+        // anchorに名前をつける
+        let anchorCount =  arView.scene.anchors.count + 1
+        anchor.name = "anchor\(anchorCount)"
         
         let textMesh = MeshResource.generateText(meigen, extrusionDepth: 0.03, font: .systemFont(ofSize: 0.05), containerFrame: CGRect.zero, alignment: .center, lineBreakMode: .byWordWrapping)
         let textMaterial = SimpleMaterial(color: UIColor.yellow, roughness: 0.0, isMetallic: true)
@@ -89,5 +92,13 @@ class ARViewController: UIViewController, ARSessionDelegate {
     
     func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
         print("added!")
+    }
+    
+    func session(_ session: ARSession, didUpdate frame: ARFrame) {
+        let cameraTransform = frame.camera.transform
+        print("updated!")
+        arView.scene.anchors.forEach { anchor in
+            print(anchor)
+        }
     }
 }
