@@ -28,3 +28,9 @@ final class FamousQuoteModel {
         }
     }
 }
+
+extension String {
+    func insertLineBreak() -> String {
+        return replacingOccurrences(of: "[、。]", with: "$0\n", options: .regularExpression)
+    }
+}

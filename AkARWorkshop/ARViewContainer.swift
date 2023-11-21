@@ -80,7 +80,7 @@ class ARViewController: UIViewController, ARSessionDelegate {
         let anchorCount =  arView.scene.anchors.count + 1
         anchor.name = "anchor\(anchorCount)"
         
-        let textMesh = MeshResource.generateText(meigen, extrusionDepth: 0.03, font: .systemFont(ofSize: 0.05), containerFrame: CGRect.zero, alignment: .center, lineBreakMode: .byWordWrapping)
+        let textMesh = MeshResource.generateText(meigen.insertLineBreak(), extrusionDepth: 0.03, font: .systemFont(ofSize: 0.05), containerFrame: CGRect.zero, alignment: .center, lineBreakMode: .byWordWrapping)
         let textMaterial = SimpleMaterial(color: UIColor.yellow, roughness: 0.0, isMetallic: true)
         let text = ModelEntity(mesh: textMesh, materials: [textMaterial])
         
@@ -92,13 +92,5 @@ class ARViewController: UIViewController, ARSessionDelegate {
     
     func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
         print("added!")
-    }
-    
-    func session(_ session: ARSession, didUpdate frame: ARFrame) {
-        let cameraTransform = frame.camera.transform
-        print("updated!")
-        arView.scene.anchors.forEach { anchor in
-            print(anchor)
-        }
     }
 }

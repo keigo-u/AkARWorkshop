@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 // MARK: - 定数と変数
 let a: String = "constant"
